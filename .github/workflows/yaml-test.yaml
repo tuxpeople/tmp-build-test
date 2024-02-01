@@ -20,5 +20,5 @@ jobs:
         id: prep
         run: |
           echo $GITHUB_ENV
-          echo
+          echo "****************-----------------***********************"
           env
