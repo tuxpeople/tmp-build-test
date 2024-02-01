@@ -15,3 +15,10 @@ jobs:
         uses: doughepi/yaml-env-action@v1
         with:
           files: env1.yaml
+
+      - name: Prepare
+        id: prep
+        run: |
+          echo $GITHUB_ENV
+          echo
+          env
