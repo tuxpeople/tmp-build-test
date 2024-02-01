@@ -19,6 +19,16 @@ jobs:
       - name: Prepare
         id: prep
         run: |
+          FILE=latest.sh
+          if [ -f "$FILE" ]; then
+            APP_VERSION=$($FILE)
+          else if [ -z "${{ env.VERSION }}" ]; then
+            APP_VERSION="${{ env.VERSION }}"
+          else
+            APP_VERSION="0.0.0"
+          fi
+          echo "App Version is ${APP_VERSION}"
+          echo "****************-------11----------***********************"
           echo $GITHUB_ENV
-          echo "****************-----------------***********************"
+          echo "****************---------22--------***********************"
           env
