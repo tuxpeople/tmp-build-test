@@ -19,7 +19,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          FILE=latest.sh
+          FILE="latest.sh"
           if [ -f $FILE ]; then
             APP_VERSION=$($FILE)
           else if [ "${{ env.VERSION }}" != "" ]; then
