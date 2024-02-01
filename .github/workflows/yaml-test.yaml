@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Load environment from YAML
-        uses: doughepi/yaml-env-action
+        uses: doughepi/yaml-env-action@v1
         with:
           files: env1.yaml
