@@ -1,0 +1,17 @@
+---
+name: "YAML Test"
+
+on:
+  workflow_call:
+
+jobs:
+  yaml:
+    name: Load YAML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Load environment from YAML
+        uses: doughepi/yaml-env-action
+        with:
+          files: env1.yaml
