@@ -20,9 +20,9 @@ jobs:
         id: prep
         run: |
           FILE=latest.sh
-          if [ -f "$FILE" ]; then
+          if [ -f $FILE ]; then
             APP_VERSION=$($FILE)
-          else if [ -z "${{ env.VERSION }}" ]; then
+          else if [ "${{ env.VERSION }}" != "" ]; then
             APP_VERSION="${{ env.VERSION }}"
           else
             APP_VERSION="0.0.0"
